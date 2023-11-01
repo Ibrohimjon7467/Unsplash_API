@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.error-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+}
+
+form input {
+  width: 100%;
+  max-width: 200px;
+  font-size: 20px;
+  padding: 5px 10px;
+  font-family: inherit;
+}
+
+form button {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 10px;
+  background: #333;
+  font-family: inherit;
+}
+
+.galery {
+  margin-top: 30px;
+}
+.galery ul{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 11px;
+}
+
+img {
+  object-fit: cover;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+@media (max-width:982px) {
+  img{
+    width: 100%;
+  }
+}
+
+@media (max-width:390px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .search{
+    text-align: center;
+  }
+}
+
+@media (max-width:370px) {
+  img{
+    width: 270px;
+    padding: 0;
+  }
+  .galery ul{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+  }
+}
